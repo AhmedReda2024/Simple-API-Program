@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <title>Weather App</title>
+    <!-- ========== Start google fonts ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ========== End google fonts ========== -->
+    <!-- ========== Start FONT AWESOME LINK ========== -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- ========== End FONT AWESOME LINK ========== -->
+
+    <!-- ========== BOOTSTRAP CSS LINK ========== -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- ========== BOOTSTRAP CSS LINK ========== -->
+
+    <!-- ========== MAIN CSS ========== -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- ========== MAIN CSS ========== -->
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-4">
+        <div class="container">
+          <a class="navbar-brand d-flex gap-2 align-items-center" href="#">
+            <img class="w-25" src="./images/logo@2x.png" alt="" />
+            <h1 class="h5">
+              weather
+              <small class="d-block">tagline goes here</small>
+            </h1>
+          </a>
+          <button
+            class="navbar-toggler d-lg-none"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapsibleNavId"
+            aria-controls="collapsibleNavId"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active nav-border"
+                  href="#"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">News </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Live cameras</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Photos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="pt-4">
+      <div class="container py-5">
+        <input
+          type="text"
+          name="searchCity"
+          id="search"
+          placeholder="find your location..."
+          class="w-100 mx-auto form-control rounded-5 text-white"
+        />
+      </div>
+
+      <div class="row g-0 mx-3">
+        <!-- ========== Today Api Data Section ========== -->
+        <div class="card col-md-4 bg-sec-color m-0 rounded-4">
+          <div
+            class="item d-flex justify-content-between py-2 px-3 bg-main-color text-white"
+            id="todayDate"
+          >
+            <p id="dayName" class="my-auto"></p>
+            <span>
+              <span id="dayNumber" class="my-auto"></span>
+              <span id="todayMonth" class="my-auto"></span>
+            </span>
+          </div>
+          <div class="item px-3 py-3 pt-5 text-white" id="today">
+            <p id="todayLocation" class="fs-4"></p>
+            <div class="d-flex justify-content-between align-items-center">
+              <span class="fs-1 fw-bolder">
+                <span id="todayTemp"></span>
+                <span><sup>o</sup> C</span>
+              </span>
+              <img id="todayConditionImg" src="images/113.png" alt="" />
+            </div>
+            <p id="todayText" class="fs-6 text-color"></p>
+          </div>
+          <div class="item d-flex text-light p-3">
+            <div class="d-flex me-3">
+              <img
+                src="images/icon-umberella@2x.png"
+                class="footer-icons me-2"
+                alt=""
+              />
+              <p id="humidity"></p>
+            </div>
+            <div class="d-flex me-3">
+              <img
+                src="images/icon-wind@2x.png"
+                class="footer-icons mx-2"
+                alt=""
+              />
+              <p id="wind"></p>
+            </div>
+            <div class="d-flex">
+              <img
+                src="images/icon-compass@2x.png"
+                class="footer-icons mx-2"
+                alt=""
+              />
+              <p id="windDirection"></p>
+            </div>
+          </div>
+        </div>
+        <!-- ========== Today Api Data Section ========== -->
+
+        <!-- ========== Tomorrow Api Data Section ========== -->
+        <div class="card col-md-4 m-0 bg-main-color">
+          <div class="py-2 text-center bg-sec-color text-light">
+            <p class="nextDayName my-auto"></p>
+          </div>
+          <div class="item text-white p-3 text-center pt-5">
+            <img class="nextConditionImg" src="images/113.png" alt="" />
+            <h3>
+              <span class="nextMaxTemp"></span>
+              <span><sup>o</sup> C</span>
+            </h3>
+            <h5 class="text">
+              <span class="nextMinTemp text-white-50"></span>
+              <span class="text-white-50"><sup>o</sup> C</span>
+            </h5>
+            <p class="nextConditionText fs-6 text-color"></p>
+          </div>
+        </div>
+        <!-- ========== Tomorrow Api Data Section ========== -->
+
+        <!-- ========== After Tomorrow Api Data Section ========== -->
+        <div class="card col-md-4 m-0 bg-sec-color rounded-4">
+          <div
+            class="item py-2 text-center px-3 bg-main-color text-white rounded-end"
+          >
+            <p class="nextDayName my-auto"></p>
+          </div>
+          <div class="item text-white p-3 text-center pt-5">
+            <img class="nextConditionImg" src="images/113.png" alt="" />
+            <h3>
+              <span class="nextMaxTemp"></span>
+              <span class=""><sup>o</sup> C</span>
+            </h3>
+            <h5 class="text">
+              <span class="nextMinTemp text-white-50"></span>
+              <span class="text-white-50"><sup>o</sup> C</span>
+            </h5>
+            <p class="nextConditionText fs-6 text-color"></p>
+          </div>
+        </div>
+        <!-- ========== After Tomorrow Api Data Section ========== -->
+      </div>
+    </section>
+    <!-- ==========BOOTSTRAP JS LINK ========== -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- ==========BOOTSTRAP JS LINK ========== -->
+    <!-- ========== MAIN js ========== -->
+    <script src="./js/main.js"></script>
+    <!-- ========== MAIN js ========== -->
+  </body>
+</html>

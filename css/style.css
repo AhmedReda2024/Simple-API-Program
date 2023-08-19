@@ -1,0 +1,97 @@
+/***** START GLOBAL *****/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Caprasimo", "cursive";
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: rgb(30, 32, 43);
+}
+
+/***** End GLOBAL *****/
+
+/***** NAV-BAR SECTION *****/
+
+nav .nav-border {
+  border: 2px solid rgb(0, 154, 216) !important;
+  border-radius: 30px;
+  padding: 5px 25px !important;
+}
+nav .nav-link {
+  border: none;
+  padding: 5px 25px !important;
+  transition: 0.4s ease-in-out;
+}
+nav .nav-link:hover {
+  border: 2px solid rgb(0, 154, 216) !important;
+  border-radius: 30px;
+}
+.nav-item {
+  padding-inline: 10px !important;
+}
+/***** NAV-BAR SECTION *****/
+
+/***** home section *****/
+section#home {
+  background-image: url(../images/banner.png);
+  min-height: 50vh;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #fff;
+  background-color: #262936d1;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid rgb(22, 88, 120);
+  appearance: none;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control:focus {
+  color: #fff;
+  background-color: #262936d1;
+  border-color: #86b7fe;
+  outline: 0;
+}
+input::placeholder{
+  color: #fff !important;
+}
+section#weather {
+  background-color: #000;
+  min-height: 50vh;
+}
+
+.logo-img {
+  width: 80px;
+  height: 40px;
+}
+
+.bg-main-color {
+  background-color: rgba(30, 32, 43, 0.905);
+}
+
+.bg-sec-color {
+  background-color: #262936d1;
+}
+
+.footer-icons {
+  width: 20px;
+  height: 20px;
+}
+
+.text-color {
+  color: rgb(15, 168, 219);
+}
+/***** End home section *****/
+
+/***** footer section *****/
+
+/***** End footer section *****/
